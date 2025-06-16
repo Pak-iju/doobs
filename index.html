@@ -7,86 +7,35 @@
   <link rel="dns-prefetch" href="https://cdn.video-src.com">
   <link rel="stylesheet" href="https://cdn.video-src.com/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.video-src.com/style.css">
-  <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.video-src.com/img/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="https://cdn.video-src.com/img/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.video-src.com/img/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.video-src.com/img/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.video-src.com/img/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.video-src.com/img/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.video-src.com/img/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.video-src.com/img/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.video-src.com/img/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="https://cdn.video-src.com/img/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.video-src.com/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.video-src.com/img/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.video-src.com/img/favicon-16x16.png">
   <meta name="theme-color" content="#fe60816">
   <meta name="robots" content="noindex, nofollow, nosnippet, noarchive, noimageindex" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 100px;
-      font-size: 20px;
-    }
-    #countdown {
-      font-weight: bold;
-      font-size: 48px;
-      color: #007bff;
-      margin-top: 20px;
-      animation: pulse 1s infinite alternate;
-    }
-    @keyframes pulse {
-      from {
-        color: #007bff;
-        transform: scale(1);
-      }
-      to {
-        color: #0056b3;
-        transform: scale(1.2);
-      }
-    }
-  </style>
 </head>
 <body>
-  <p>Redirecting in <span id="countdown">5</span> seconds...</p>
-
   <script>
-    const path = window.location.pathname; // misal: /e/bzj0jeilcfsb
+    const path = window.location.pathname;
     const parts = path.split('/');
     const videoId = parts.length > 2 ? parts[2] : null;
 
     if (videoId) {
-      let count = 5;
-      const countdownEl = document.getElementById('countdown');
-
-      const interval = setInterval(() => {
-        count--;
-        if (count >= 0) {
-          countdownEl.textContent = count;
-        }
-        if (count === 0) {
-          clearInterval(interval);
-          window.location.href = "https://doply.net/e/" + encodeURIComponent(videoId);
-        }
-      }, 1000);
+      window.location.href = "https://doply.net/e/" + encodeURIComponent(videoId);
     } else {
       document.body.innerHTML = "<h2>ID tidak ditemukan.</h2>";
     }
   </script>
-    <!-- Histats.com START -->
-<script type="text/javascript">
-var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,4872043,4,0,0,0,00010000']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-  var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-  hs.src = ('//s10.histats.com/js15_as.js');
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();
-</script>
-<noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?4872043&101" alt="" border="0"></a></noscript>
-<!-- Histats.com END -->
+
+  <!-- Histats.com START -->
+  <script type="text/javascript">
+    var _Hasync= _Hasync|| [];
+    _Hasync.push(['Histats.start', '1,4872043,4,0,0,0,00010000']);
+    _Hasync.push(['Histats.fasi', '1']);
+    _Hasync.push(['Histats.track_hits', '']);
+    (function() {
+      var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+      hs.src = ('//s10.histats.com/js15_as.js');
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+    })();
+  </script>
+  <noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?4872043&101" alt="" border="0"></a></noscript>
+  <!-- Histats.com END -->
 </body>
 </html>
